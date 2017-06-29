@@ -23,8 +23,11 @@ directory.
 ## Run command
 
 ```
-docker run --rm  -v "/path/to/my/play/project/:/code" -p 80:9000 domingogallardo/playframework sbt run
+docker run --rm  -it -v "/path/to/my/play/project/:/code" -p 80:9000 domingogallardo/playframework
 ```
+
+This launch the sbt console, where you can enter any sbt command:
+`compile`, `run` or `test`.
 
 The exported port 9000 is the default play port. In the command is
 mapped to the default 80 port of the host machine so you can test your

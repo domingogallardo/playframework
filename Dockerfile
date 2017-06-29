@@ -30,6 +30,10 @@ COPY ${PROJECT_NAME} ${PROJECT_HOME}/${PROJECT_NAME}
 RUN cd $PROJECT_HOME/$PROJECT_NAME && \
     sbt compile 
 
+# Command
+
+CMD ["sbt"]
+
 # Expose code volume and play port 9000 
 
 VOLUME "/code"
