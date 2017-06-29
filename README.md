@@ -13,7 +13,9 @@ Includes:
 
 The image contains the ivy2 and sbt dependencies for Play Framework 2.6.0. They are located in /root/.ivy2 and /root/.sbt directories. 
 
-This image is not meant to be used for another version of Play. If you try to compile or run a Play project configured for another version it will donwload all the dependiencies new dependencies in the container. You can look and change the play version for the project in the `project/plugins.sbt` file.
+This image is not meant to be used for another version of Play. If you try to compile or run a Play project configured for another version it will donwload all the new dependencies in the container. This takes a lot of time and is useless, because the next time the container is created, all the dependencies have disapeared and the process has to begin again.
+
+You can look and change the play version of a project in the `project/plugins.sbt` file.
 
 ## Volume
 
