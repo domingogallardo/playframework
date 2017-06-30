@@ -24,10 +24,20 @@ Exports a volume on `/code` in which you have to mount the Play 2.6.0 project di
 
 ## Run commands
 
-The CMD in the Dockerfile launch the sbt command. The run command launch the sbt console in the container, where you can enter any sbt command: `compile`, `run`, `test`, `clean`:
+The CMD in the Dockerfile launch the sbt command. The `docker run` command launches the sbt console in the container, where you can enter any sbt command: `compile`, `run`, `test`, `clean`, etc.
+
+For instance, to run a play project in the `/path/to/my/play/project` directory:
 
 ```
-docker run --rm  -it -v "/path/to/my/play/project/:/code" -p 80:9000 domingogallardo/playframework
+$ cd /path/to/my/play/project
+$ docker run --rm  -it -v "/path/to/my/play/project/:/code" -p 80:9000 domingogallardo/playframework
+[play-project] $ test
+...
+[success] Total time: 21 s, completed Jun 30, 2017 7:33:27 AM
+[play-project] $ run
+(you can test your play app on localhost in your host machine)
+(use Enter to stop and go back to the console)
+[play-project] $ exit
 ```
 
 The exported port 9000 is the default play port. In the command is mapped to the default 80 port of the host machine so you can test your play app on `localhost` without telling any port.
