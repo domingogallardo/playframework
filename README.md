@@ -1,6 +1,6 @@
 # Play Framework 
 
-Docker image which provides sbt and dependencies needed to launch **Play 2.6.0** applications.
+Docker image with sbt and dependencies needed to launch **Play 2.6.0** applications.
 
 Includes: 
 
