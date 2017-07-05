@@ -6,7 +6,6 @@ lazy val root = (project in file(".")).enablePlugins(PlayJava)
 
 scalaVersion := "2.11.1"
 
-libraryDependencies += guice
 libraryDependencies += javaJpa
 libraryDependencies += "com.h2database" % "h2" % "1.4.194"
 libraryDependencies += "org.hibernate" % "hibernate-core" % "5.2.5.Final"
