@@ -24,7 +24,7 @@ RUN  apk add --no-cache git openssh
 # in the container /root directory
 
 ENV PROJECT_HOME /usr/src
-ENV PROJECT_NAME play-java-starter-example-2.5.15
+ENV PROJECT_NAME play-java-jpa-example-2.5.15
 
 COPY ${PROJECT_NAME} ${PROJECT_HOME}/${PROJECT_NAME}
 RUN cd $PROJECT_HOME/$PROJECT_NAME && \
