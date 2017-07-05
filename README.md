@@ -8,7 +8,7 @@ Includes:
 - Java: Oracle Java 8
 - Sbt version: 0.13.15
 - Git
-- Play Framework: 2.5.15 (with jpa, hibernate 5.2.5 , mockito 2.1.0, sbt web plugins)
+- Play Framework: 2.5.15 (with scala 2.11.11, jpa, hibernate 5.2.5 , mockito 2.1.0, sbt web plugins)
 - Based on image: anapsix/alpine-java:8_jdk
 
 The image contains the ivy2 and sbt dependencies for Play Framework 2.5.15. They are located in `/root/.ivy2` and `/root/.sbt` directories. 
