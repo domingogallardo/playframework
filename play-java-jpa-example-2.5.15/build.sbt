@@ -8,7 +8,6 @@ scalaVersion := "2.11.11"
 
 libraryDependencies += javaJpa
 libraryDependencies += "org.hibernate" % "hibernate-core" % "5.2.5.Final"
-libraryDependencies += "org.hibernate" % "hibernate-entitymanager" % "4.3.7.Final"
 libraryDependencies +=  "mysql" % "mysql-connector-java" % "5.1.18"
 libraryDependencies += "org.dbunit" % "dbunit" % "2.4.9"
 
