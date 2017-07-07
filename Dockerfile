@@ -36,8 +36,8 @@ CMD ["sbt"]
 
 # Expose code volume and play port 9000 
 
-VOLUME "/code"
 EXPOSE 9000
+VOLUME "/code"
 WORKDIR /code
 
 # EOF
