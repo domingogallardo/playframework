@@ -32,7 +32,7 @@ RUN cd $PROJECT_HOME/$PROJECT_NAME && \
 
 # Command
 
-CMD ["/bin/bash"]
+CMD ["sbt"]
 
 # Expose code volume and play port 9000
 
