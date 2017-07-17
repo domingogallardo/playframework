@@ -28,17 +28,16 @@ ENV PROJECT_NAME play-java-jpa-example-2.5.15
 
 COPY ${PROJECT_NAME} ${PROJECT_HOME}/${PROJECT_NAME}
 RUN cd $PROJECT_HOME/$PROJECT_NAME && \
-    sbt compile 
+    sbt compile
 
 # Command
 
-CMD ["sbt"]
+CMD ["/bin/bash"]
 
-# Expose code volume and play port 9000 
+# Expose code volume and play port 9000
 
 EXPOSE 9000
 VOLUME "/code"
 WORKDIR /code
 
 # EOF
-
