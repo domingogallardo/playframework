@@ -1,6 +1,6 @@
 # Play Framework 
 
-Docker image with sbt and dependencies needed to launch **Play 2.5.15** applications.
+Docker image with sbt and dependencies needed to launch **Play 2.5.18** applications.
 
 Includes: 
 
@@ -8,10 +8,11 @@ Includes:
 - Java: Oracle Java 8
 - Sbt version: 0.13.15
 - Git
-- Play Framework: 2.5.15 (with scala 2.11.11, jpa, hibernate 5.2.5 , mockito 2.1.0, sbt web plugins)
+- Node.js
+- Play Framework: 2.5.18 (with scala 2.11.11, jpa, hibernate 5.2.5 , mockito 2.1.0, sbt web plugins)
 - Based on image: anapsix/alpine-java:8_jdk
 
-The image contains the ivy2 and sbt dependencies for Play Framework 2.5.15. They are located in `/root/.ivy2` and `/root/.sbt` directories. 
+The image contains the ivy2 and sbt dependencies for Play Framework 2.5.18. They are located in `/root/.ivy2` and `/root/.sbt` directories. 
 
 **This image is not meant to be used for another version of Play**. If you try to compile or run a Play project configured for another version it will donwload all the new dependencies in the container. This takes a lot of time and is useless, because the next time the container is created, all the dependencies have disapeared and the process has to begin again.
 
@@ -19,7 +20,7 @@ You can look and change the play version of a project in the `project/plugins.sb
 
 ## Volume
 
-Exports a volume on `/code` in which you have to mount the Play 2.5.15 project directory.
+Exports a volume on `/code` in which you have to mount the Play 2.5.18 project directory.
 
 
 ## Run commands
