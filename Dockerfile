@@ -19,12 +19,15 @@ RUN apk add --no-cache --update bash wget && mkdir -p "$SBT_HOME" && \
 # Install git
 RUN  apk add --no-cache git openssh
 
+# Install node.js
+RUN apk add nodejs
+
 # Copy play project and compile it
 # This will download all the ivy2 and sbt dependencies and install them
 # in the container /root directory
 
 ENV PROJECT_HOME /usr/src
-ENV PROJECT_NAME play-java-jpa-example-2.5.15
+ENV PROJECT_NAME play-java-jpa-example-2.5.18
 
 COPY ${PROJECT_NAME} ${PROJECT_HOME}/${PROJECT_NAME}
 RUN cd $PROJECT_HOME/$PROJECT_NAME && \
