@@ -31,7 +31,7 @@ For instance, to run a play project in the `/path/to/my/play/project` directory:
 
 ```
 $ cd /path/to/my/play/project
-$ docker run --rm  -it -v "${PWD}:/code" -p 80:9000 domingogallardo/playframework
+$ docker run --rm  -it -v "${PWD}:/code" -p 9000:9000 domingogallardo/playframework
 [play-project] $ test
 ...
 [success] Total time: 21 s, completed Jun 30, 2017 7:33:27 AM
@@ -41,7 +41,7 @@ $ docker run --rm  -it -v "${PWD}:/code" -p 80:9000 domingogallardo/playframewor
 [play-project] $ exit
 ```
 
-The exported port 9000 is the default play port. Is mapped to the default 80 port of the host machine so you can test your play app on `localhost` without telling any port.
+The exported port 9000 is the default play port. Is mapped to the 9000 port of the host machine so you can test your play app on `localhost` without telling any port.
 
 You can also launch an explicit `sbt` command when launching the container. 
 
@@ -54,7 +54,7 @@ docker run --rm -v "${PWD}:/code" domingogallardo/playframework sbt test
 Or to run the application:
 
 ```
-docker run --rm -it -v "${PWD}:/code" -p 80:9000 domingogallardo/playframework sbt run
+docker run --rm -it -v "${PWD}:/code" -p 9000:9000 domingogallardo/playframework sbt run
 ```
 
 
