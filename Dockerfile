@@ -37,9 +37,10 @@ RUN cd $PROJECT_HOME/$PROJECT_NAME && \
 
 CMD ["sbt"]
 
-# Expose code volume and play port 9000
+# Expose code volume and play ports 9000 (for execution) and 9999 (for debugging)
 
 EXPOSE 9000
+EXPOSE 9999
 VOLUME "/code"
 WORKDIR /code
 
