@@ -1,6 +1,6 @@
 # Play Framework 
 
-Docker image with sbt and dependencies needed to launch **Play 2.5.18** applications.
+[Docker image](https://hub.docker.com/r/domingogallardo/playframework/) with sbt and dependencies needed to launch **Play 2.5.18** applications.
 
 Includes: 
 
@@ -41,7 +41,7 @@ $ docker run --rm  -it -v "${PWD}:/code" -p 9000:9000 domingogallardo/playframew
 [play-project] $ exit
 ```
 
-The exported port 9000 is the default play port. Is mapped to the 9000 port of the host machine so you can test your play app on `localhost` without telling any port.
+The exported port 9000 is the default play port. 
 
 You can also launch an explicit `sbt` command when launching the container. 
 
