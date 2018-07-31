@@ -37,8 +37,11 @@ RUN cd $PROJECT_HOME/$PROJECT_NAME && \
 
 CMD ["sbt"]
 
-# Expose code volume and play port 9000 
+# Expose code volume and play ports 3306 for
+# connecting with external database and
+# 9000 for running Play application
 
+EXPOSE 3306
 EXPOSE 9000
 VOLUME "/code"
 WORKDIR /code
